@@ -31,7 +31,7 @@ CREATE TABLE character_items (
 CREATE TABLE character_stats(
     id_character_stat INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
     id_character CHAR(24) NOT NULL,
-    id_stat CHAR(24) NOTT NULL
+    id_stat CHAR(24) NOT NULL
 );
 
 CREATE TABLE character_weapons(
@@ -41,7 +41,7 @@ CREATE TABLE character_weapons(
 );
 
 CREATE TABLE items(
-    id_stat INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT, 
+    id_item INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT, 
     name CHAR(24) NOT NULL,
     type INT(11) NOT NULL,
     equipable TINYINT(1) NOT NULL,
@@ -87,7 +87,7 @@ CREATE TABLE users(
     username VARCHAR(16) NOT NULL,
     password CHAR(32) NOT NULL,
     email VARCHAR(32) NOT NULL,
-    birthdate DATE NOT NULL
+    birthdate DATE NOT NULL,
     registered DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -104,7 +104,7 @@ CREATE TABLE weapons(
 
 CREATE TABLE weapon_types(
     id_weapon_type INT(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    weapon_type VARCHAR(16) NOT NULL,
+    weapon_type VARCHAR(16) NOT NULL
 );
 
 INSERT INTO characters ( name, age, gender, level, health, height, weight, origin ) VALUES
