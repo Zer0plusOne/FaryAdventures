@@ -86,7 +86,7 @@ CREATE TABLE users(
     id_user INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(16) NOT NULL,
     password CHAR(32) NOT NULL,
-    email VARCHAR(32) NOT NULL,
+    email VARCHAR(35) NOT NULL,
     birthdate DATE NOT NULL,
     registered DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
