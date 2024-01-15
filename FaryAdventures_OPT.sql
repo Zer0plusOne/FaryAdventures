@@ -159,7 +159,7 @@ INSERT INTO stats ( reputation, speed, morality, hunger, stamina, defense, refle
 ;
 
 INSERT INTO students ( name, surname, age, DNI, email, comments, schooled ) VALUES
-("Francisco", "Franco", 30, '37106582', "elcaudillo@vivaespaña.es" )
+("Francisco", "Franco", 30, '37106582', "elcaudillo@vivaespaña.es", "odia a los moros", 0 )
 ;
 
 INSERT INTO users (username, password, email, birthdate) VALUES
