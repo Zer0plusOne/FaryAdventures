@@ -9,6 +9,7 @@ DROP TABLE IF EXISTS students;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS weapons;
 DROP TABLE IF EXISTS weapon_types;
+DROP TABLE IF EXISTS comments;
 
 CREATE TABLE characters (
     id_character INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -106,6 +107,12 @@ CREATE TABLE weapon_types(
     id_weapon_type INT(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     weapon_type VARCHAR(16) NOT NULL
 );
+
+CREATE TABLE comments(
+    id_comment INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    comment TEXT,
+    fecha_hora DATETIME NOT NULL DEFAULT now()
+)
 
 INSERT INTO characters ( name, age, gender, level, health, height, weight, origin ) VALUES
 ( "El Fary", 86, "N", 200, 70, 1.2, 47, "GY"),
