@@ -31,7 +31,7 @@ CREATE TABLE character_items (
 CREATE TABLE character_stats(
     id_character_stat INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
     id_character INT(10) NOT NULL,
-    id_statINT(10) NOT NULL
+    id_stat INT(10) NOT NULL
 );
 
 CREATE TABLE character_weapons(
