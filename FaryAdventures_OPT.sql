@@ -30,14 +30,14 @@ CREATE TABLE character_items (
 
 CREATE TABLE character_stats(
     id_character_stat INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    id_character CHAR(24) NOT NULL,
-    id_stat CHAR(24) NOT NULL
+    id_character INT(10) NOT NULL,
+    id_statINT(10) NOT NULL
 );
 
 CREATE TABLE character_weapons(
     id_character_weapon INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    id_character CHAR(24) NOT NULL,
-    id_weapon CHAR(24) NOT NULL
+    id_character INT(10) NOT NULL,
+    id_weapon INT(10) NOT NULL
 );
 
 CREATE TABLE items(
@@ -55,8 +55,8 @@ CREATE TABLE items(
 
 CREATE TABLE item_types(
     id_item_type INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    id_item CHAR(24),
-    id_type CHAR(24)
+    id_item INT(10),
+    id_type INT(10)
 );
 
 CREATE TABLE stats (
@@ -99,7 +99,7 @@ CREATE TABLE weapons(
     damage INT(11) NOT NULL,
     critical INT(11) NOT NULL,
     weight FLOAT NOT NULL,
-    id_weapon_type TINYINT(1)
+    id_weapon_type INT(10)
 );
 
 CREATE TABLE weapon_types(
