@@ -110,7 +110,7 @@ CREATE TABLE weapon_types(
 
 CREATE TABLE comments(
     id_comment INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    comment TEXT,
+    `comment` TEXT,
     fecha_hora DATETIME NOT NULL DEFAULT now()
 )
 
