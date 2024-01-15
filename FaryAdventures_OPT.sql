@@ -112,7 +112,7 @@ CREATE TABLE comments(
     id_comment INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `comment` TEXT,
     fecha_hora DATETIME NOT NULL DEFAULT now()
-)
+);
 
 INSERT INTO characters ( name, age, gender, level, health, height, weight, origin ) VALUES
 ( "El Fary", 86, "N", 200, 70, 1.2, 47, "GY"),
