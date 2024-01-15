@@ -114,6 +114,10 @@ CREATE TABLE comments(
     fecha_hora DATETIME NOT NULL DEFAULT now()
 );
 
+CREATE USER `comentarios`@`localhost`;
+
+GRANT SELECT,INSERT ON faryadventures.comments TO `comentarios`@`localhost`;
+
 INSERT INTO characters ( name, age, gender, level, health, height, weight, origin ) VALUES
 ( "El Fary", 86, "N", 200, 70, 1.2, 47, "GY"),
 ( "El Cigala", 54, "M", 150, 80, 2.4, 150, "RU"),
