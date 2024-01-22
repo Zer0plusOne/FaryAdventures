@@ -11,6 +11,22 @@ DROP TABLE IF EXISTS weapons;
 DROP TABLE IF EXISTS weapon_types;
 DROP TABLE IF EXISTS comments;
 
+CREATE ROLE IF NOT EXISTS FaryAdmin;
+CREATE ROLE IF NOT EXISTS FaryEscritor;
+CREATE ROLE IF NOT EXISTS FaryLector;
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON faryadventures.* TO FaryAdmin;
+GRANT SELECT, INSERT, UPDATE ON faryadventures.* TO FaryEscritor;
+GRANT SELECT ON faryadventures.* TO FaryLector;
+
+CREATE USER IF NOT EXISTS `FaryConCorbata`@`localhost`;
+CREATE USER IF NOT EXISTS`FaryConBoli`@`localhost`;
+CREATE USER IF NOT EXISTS `FaryConGafas`@`localhost`; 
+
+GRANT FaryAdmin TO FaryConCorbata;
+GRANT FaryEscritor TO FaryConBoli;
+GRANT FaryLector TO FaryConGafas;
+
 CREATE TABLE characters (
     id_character INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(24) NOT NULL,
