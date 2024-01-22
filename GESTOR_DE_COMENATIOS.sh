@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DB_USER="comentar"
+DB_USER="comentarios"
 DB_NAME="faryadventures"
 
 echo "Bienvenido al gestor de comentarios de la base de datos Faryadventures"
