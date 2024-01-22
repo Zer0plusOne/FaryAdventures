@@ -23,7 +23,6 @@ CREATE USER IF NOT EXISTS `comentarios`@`localhost`;
 GRANT SELECT, INSERT, UPDATE, DELETE ON faryadventures.* TO FaryAdmin;
 GRANT SELECT, INSERT, UPDATE ON faryadventures.* TO FaryEscritor;
 GRANT SELECT ON faryadventures.* TO FaryLector;
-GRANT SELECT, INSERT ON faryadventures.comments TO `comentarios`@`localhost`;
 
 GRANT FaryAdmin TO FaryConCorbata@localhost;
 GRANT FaryEscritor TO FaryConBoli@localhost;
@@ -131,7 +130,7 @@ CREATE TABLE comments(
     `comment` TEXT,
     fecha_hora DATETIME NOT NULL DEFAULT now()
 );
-
+GRANT SELECT, INSERT ON faryadventures.comments TO `comentarios`@`localhost`;
 INSERT INTO characters ( name, age, gender, level, health, height, weight, origin ) VALUES
 ( "El Fary", 86, "N", 200, 70, 1.2, 47, "GY"),
 ( "El Cigala", 54, "M", 150, 80, 2.4, 150, "RU"),
