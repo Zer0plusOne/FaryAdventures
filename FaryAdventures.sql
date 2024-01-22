@@ -23,9 +23,9 @@ CREATE USER IF NOT EXISTS `FaryConCorbata`@`localhost`;
 CREATE USER IF NOT EXISTS`FaryConBoli`@`localhost`;
 CREATE USER IF NOT EXISTS `FaryConGafas`@`localhost`; 
 
-GRANT FaryAdmin TO FaryConCorbata;
-GRANT FaryEscritor TO FaryConBoli;
-GRANT FaryLector TO FaryConGafas;
+GRANT FaryAdmin TO FaryConCorbata@localhost;
+GRANT FaryEscritor TO FaryConBoli@localhost;
+GRANT FaryLector TO FaryConGafas@localhost;
 
 CREATE TABLE characters (
     id_character INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
