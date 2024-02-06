@@ -19,6 +19,7 @@ CREATE USER IF NOT EXISTS `FaryConCorbata`@`localhost`;
 CREATE USER IF NOT EXISTS`FaryConBoli`@`localhost`;
 CREATE USER IF NOT EXISTS `FaryConGafas`@`localhost`;
 CREATE USER IF NOT EXISTS `comentarios`@`localhost`; 
+CREATE USER IF NOT EXISTS `carles@10.65.0.77`
 
 GRANT SELECT, INSERT, UPDATE, DELETE ON faryadventures.* TO FaryAdmin;
 GRANT SELECT, INSERT, UPDATE ON faryadventures.* TO FaryEscritor;
